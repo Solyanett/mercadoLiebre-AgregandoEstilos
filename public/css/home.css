@@ -1,17 +1,20 @@
 
+.menu{
+    display:none;
+}
 /*body*/
 
 body{
     background-color: var(--color-grisClaro);
+    width: auto;
 }
-body img{
-    margin:5px 15px 
+
 
     /* header*/
-}
+
 header {
     background-color: var(--color-amarillo);
-    
+      
 }
 .logo{
     height: 50px;
@@ -23,66 +26,113 @@ header {
     margin-left: 20px;
     margin-bottom: 0;
 }
-.menu{
-    margin-bottom: 15px;
-}
-
 .mensaje{
     margin: 15px 50px;
 }
-
-.button{
-    
-    padding: 9px;
-    background-color: var(--color-celeste);
-    border-radius: 5px;
-    border:none; 
-    color: white; 
-   
+.menu{
+    margin-bottom: 15px;
+    margin-left: 5px;
 }
-.caja1{
+
+.cajaMenu{
+    display: flex;
+    justify-content: center; 
+}
+
+i.fa-bars{
     display: flex;
     justify-content: center;
-}
-
-.banner{
-    width: 100%;
-    margin: 15px 0 
+    background-color: var(--color-celeste);
+    margin: 10px auto;
+    border: none;
+    padding: 7px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
     
 }
-
- /* main*/
-
-section img{
-    margin:0 15px;
-    width: 90%;
+   
+.banner{
+    width: 100%;
+    margin: 15px 0;  
 }
 
-header article , nav {
-    margin:0 15px 
-}
+    /* main*/
 
-.titulares{
+ .main{
+
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     width: 90%;
+ }
+
+ .titulares{
     font-size: 24px; 
+    padding: 5px;
+    color: var( --color-grisOscuro);
+    margin-left: 10px; 
+}
+
+ .cajaProduct{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     margin:15px 10px;
+     
+     
+ }
+ .cajaArt img{
+     width: 340px;
+
+ }
+
+
+.descripcion{
+    background-color: white;
+    border-top: 1px solid var( --color-grisClaro);
+    width: 340px;
+    padding: 10px;
+    margin-bottom: 15px;
+   
+}
+
+
+article .fa-truck{
+    color: var( --color-verde);
+    border: 1px solid var(--color-verde); 
+    width: min-content;
+    font-size: 1rem; 
+    border-radius: 50%; 
+    text-align: center;
+    padding: .5em;
 }
 .precio{
     font-size: 18px;
 }
-main h4, span {
+.descripcion span{
+    color: var( --color-verde);
+}
+.descripcion h4{
+    padding: 15px 0 0;
+    color: var( --color-grisOscuro);
+    opacity: 0.7;
+    
+    
+}
+main h5, span {
     font-size: 16px;
 }
-.descripcion{
-    background-color: white;
-    margin:5px 15px;
-    width: 90%;
-}
+
 
 /*footer*/
 
 footer{
+    width: auto;
     background-color: white;
     text-align: center;
     margin: 20px 10px 5px;  
+    
 }
 footer article{
     padding: 20px;
@@ -101,4 +151,43 @@ footer i{
 .copyright{
     text-align:left;
     margin-top: 30px;
+}
+
+
+
+      /*   TABLET   */
+
+@media (min-width: 368px){
+    .menu{
+        display: initial;
+    }
+    .cajaMenu{
+        display: none;
+    }
+    .cajaProduct{
+        width: auto;
+    }
+    .cajaArt{
+        width: auto;
+        
+        
+        box-shadow:
+         0px 0px 10px rgb(100, 100, 100);
+    }
+    .cajaArt img, .descripcion{
+        width: 100%;
+
+    
+    }
+    .mensaje{
+        text-align: center;
+    }
+
+
+    
+}
+
+@media (min-width:769px){
+
+    
 }
